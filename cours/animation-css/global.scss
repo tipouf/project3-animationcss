@@ -1,0 +1,42 @@
+$cd-btn: #011c37;
+$cd-txt: #15dea5;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background: #fff;
+  color: $cd-txt;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: $cd-btn;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  transition: rotate 1000ms;
+  &:hover {
+    background-color: #ffcccc;
+    rotate: 360deg;
+  }
+}

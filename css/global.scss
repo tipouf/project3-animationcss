@@ -1,9 +1,17 @@
-
-/* color */
+/* variable color */
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
-* {
+@mixin font-text($color) {
   font-family: "Raleway", sans-serif;
+  color: $color;
+}
+
+* {
+  @include font-text($primary-color);
+}
+
+.header {
+  background-color: $primary-color;
 }
