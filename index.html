@@ -7,7 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Shrikhand"
       rel="stylesheet"
     />
     <link
@@ -17,24 +21,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./sass/style.css" />
   </head>
 
   <body>
-    <div class="main-container">
-      <header>
-        <h1 class="header">ohmyfood</h1>
-      </header>
-      <main>
-        <section class="locatisation-section"></section>
+    <header>
+      <h1 class="header">ohmyfood</h1>
+    </header>
+    <main>
+      <section class="locatisation">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Paris, Belleville</span>
+      </section>
 
-        <section class="introduction-section"></section>
+      <section class="hero">
+        <h2>Réservez le menu qui vous convient</h2>
+        <p class="hero__text">
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
+        </p>
+        <button type="button" class="primary-button">
+          Explorer nos restaurants
+        </button>
+      </section>
+      <section class="functioning-section"></section>
 
-        <section class="functioning-section"></section>
-
-        <section class="restaurants-section"></section>
-      </main>
-      <footer></footer>
-    </div>
+      <section class="restaurants-section"></section>
+    </main>
+    <footer></footer>
   </body>
 </html>
