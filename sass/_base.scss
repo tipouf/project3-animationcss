@@ -1,9 +1,11 @@
 $primary-color: #9356dc;
 $secondary-color: #f6f6f6;
 $font-color: white;
+$icon-primary-color: #7e7e7e;
 $background-color: #eaeaea;
 $main-font: "Roboto", sans-serif;
 $secondary-font: "Shrikhand", regular;
+$icon-font: "Material Icons";
 
 * {
   font-family: $main-font;
@@ -29,6 +31,32 @@ i {
 
 @mixin flex-center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.material-icons {
+  font-family: $icon-font;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
