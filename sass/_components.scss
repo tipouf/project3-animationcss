@@ -2,13 +2,7 @@
   padding: 20px;
   font-weight: 700;
   color: $font-color;
-  background-image: linear-gradient(
-    60.33deg,
-    #9356dc -11.44%,
-    #ff79da 123.93%,
-    #9356dc -5.2%,
-    #ff79da 110.74%
-  );
+  background-image: $background-color2;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   border: none;
@@ -84,8 +78,7 @@
     position: relative;
     flex-direction: column;
     justify-content: center;
-    margin: 10px;
-    height: 100%;
+    margin: 20px;
 
     &__title {
       font-size: 18px;
@@ -102,26 +95,25 @@
     }
 
     &__icon {
-      font-weight: lighter;
-      font-size: 30px;
+      // font-weight: lighter;
+      font-size: 40px;
 
       &::after {
-        content: "favorite_outline";
+        content: "favorite";
       }
 
       &:hover {
-        background: linear-gradient(
-          193.33deg,
-          #9356dc -11.44%,
-          #ff79da 123.93%
-        );
-        background-clip: text;
-        font-family: "Material Icons";
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        &::after {
+        cursor: pointer;
+        &:after {
+          font-family: $icon-font;
+          animation: opacity-transition 1s ease-out;
           content: "favorite";
+          background-size: 300%;
+          background-image: $background-color2;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
       }
     }
