@@ -50,3 +50,80 @@
     margin-inline: 10px;
   }
 }
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: 251px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+  &__tag {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #99e2d0;
+    padding: 5px 12px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #008766;
+    font-weight: 800;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 171px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 100%;
+
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &__subtitle {
+      font-size: 17px;
+    }
+
+    &__hearth {
+      position: absolute;
+      right: 10px;
+    }
+
+    &__icon {
+      font-weight: lighter;
+      font-size: 30px;
+
+      &::after {
+        content: "favorite_outline";
+      }
+
+      &:hover {
+        background: linear-gradient(
+          193.33deg,
+          #9356dc -11.44%,
+          #ff79da 123.93%
+        );
+        background-clip: text;
+        font-family: "Material Icons";
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+          content: "favorite";
+        }
+      }
+    }
+  }
+}
