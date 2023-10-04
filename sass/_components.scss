@@ -94,9 +94,8 @@
       right: 10px;
 
       &::after {
-        font-family: "Font Awesome 6 Free";
+        font-family: $icon-font;
         font-size: xx-large;
-        margin-right: 10px;
         content: "\f004";
       }
 
