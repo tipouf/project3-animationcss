@@ -1,0 +1,27 @@
+.locatisation {
+  @include flex-center;
+  flex-direction: row;
+  height: 50px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: $background-color;
+}
+
+.hero {
+  @include flex-center;
+  background: $secondary-color;
+  padding: 10px 35px 45px 35px;
+
+  &__text {
+    font-size: 18px;
+  }
+}
+
+.functioning {
+  @include mobile-container;
+}
+
+.restaurants {
+  @include mobile-container;
+  background: $background-color;
+}

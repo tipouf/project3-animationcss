@@ -10,34 +10,6 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.locatisation {
-  @include flex-center;
-  flex-direction: row;
-  height: 50px;
-  font-size: 1em;
-  font-weight: 600;
-  background-color: $background-color;
-}
-
-.hero {
-  @include flex-center;
-  background: $secondary-color;
-  padding: 10px 35px 45px 35px;
-
-  &__text {
-    font-size: 18px;
-  }
-}
-
-.functioning {
-  @include mobile-container;
-}
-
-.restaurants {
-  @include mobile-container;
-  background: $background-color;
-}
-
 .footer {
   display: grid;
   gap: 10px;
