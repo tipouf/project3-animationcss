@@ -89,25 +89,22 @@
       font-size: 17px;
     }
 
-    &__hearth {
+    &__favorite {
       position: absolute;
       right: 10px;
-    }
-
-    &__icon {
-      // font-weight: lighter;
-      font-size: 40px;
 
       &::after {
-        content: "favorite";
+        font-family: "Font Awesome 6 Free";
+        font-size: xx-large;
+        margin-right: 10px;
+        content: "\f004";
       }
 
       &:hover {
         cursor: pointer;
-        &:after {
-          font-family: $icon-font;
+        &::after {
           animation: opacity-transition 1s ease-out;
-          content: "favorite";
+          @include fa-icon-solid($fa-var-heart);
           background-size: 300%;
           background-image: $background-color2;
           background-clip: text;
