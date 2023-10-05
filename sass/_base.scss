@@ -1,20 +1,3 @@
-$primary-color: #9356dc;
-$secondary-color: #f6f6f6;
-$font-color: white;
-$icon-primary-color: #7e7e7e;
-$background-color: #eaeaea;
-$background-color2: linear-gradient(
-  60.33deg,
-  #9356dc -11.44%,
-  #ff79da 123.93%,
-  #9356dc -5.2%,
-  #ff79da 110.74%
-);
-$background-footer: #353535;
-$main-font: "Roboto", sans-serif;
-$secondary-font: "Shrikhand", regular;
-$icon-font: "Font Awesome 6 Free";
-
 @font-face {
   font-family: "Shrikhand";
   font-style: normal;
@@ -40,12 +23,22 @@ h1 {
   font-family: $secondary-font;
   font-size: 1.875em;
   font-weight: 700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  height: 25px;
+  width: 40px;
+  font-family: $main-font;
+  font-weight: 100;
+  font-size: 16px;
+  border-bottom: 3px solid #99e2d0;
 }
 
 @mixin flex-center {
@@ -100,6 +93,29 @@ a {
 
 .icon {
   margin-inline: 10px;
+}
+
+.favorite-icon {
+  &::after {
+    margin-inline: 10px;
+    font-family: $icon-font;
+    font-size: xx-large;
+    content: "\f004";
+  }
+
+  &:hover {
+    cursor: pointer;
+    &::after {
+      animation: opacity-transition 1s ease-out;
+      @include fa-icon-solid($fa-var-heart);
+      background-size: 300%;
+      background-image: $background-color2;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 
 @mixin mobile-container {

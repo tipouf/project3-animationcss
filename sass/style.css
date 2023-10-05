@@ -13,7 +13,7 @@
 .fa-sharp,
 .fas,
 .fa-solid,
-.restaurant-card__content__favorite:hover::after,
+.favorite-icon:hover::after,
 .far,
 .fa-regular,
 .fab,
@@ -30,7 +30,7 @@
 .fas,
 .fa-classic,
 .fa-solid,
-.restaurant-card__content__favorite:hover::after,
+.favorite-icon:hover::after,
 .far,
 .fa-regular {
   font-family: "Font Awesome 6 Free";
@@ -41,7 +41,7 @@
   font-family: "Font Awesome 6 Brands";
 }
 
-.restaurant-card__content__favorite:hover::after {
+.favorite-icon:hover::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -8258,7 +8258,7 @@ readers do not read off random characters that represent icons */
 }
 .fas,
 .fa-solid,
-.restaurant-card__content__favorite:hover::after {
+.favorite-icon:hover::after {
   font-weight: 900;
 }
 
@@ -8267,7 +8267,8 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2023 Fonticons, Inc.
  */
-:root, :host {
+:root,
+:host {
   --fa-style-family-classic: "Font Awesome 6 Free";
   --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
 }
@@ -8284,6 +8285,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+/* font */
 @font-face {
   font-family: "Shrikhand";
   font-style: normal;
@@ -8305,12 +8307,22 @@ h1 {
   font-family: "Shrikhand", regular;
   font-size: 1.875em;
   font-weight: 700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  height: 25px;
+  width: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  border-bottom: 3px solid #99e2d0;
 }
 
 a {
@@ -8322,11 +8334,34 @@ a {
   margin-inline: 10px;
 }
 
+.favorite-icon::after {
+  margin-inline: 10px;
+  font-family: "Font Awesome 6 Free";
+  font-size: xx-large;
+  content: "\f004";
+}
+.favorite-icon:hover {
+  cursor: pointer;
+}
+.favorite-icon:hover::after {
+  animation: opacity-transition 1s ease-out;
+  background-size: 300%;
+  background-image: linear-gradient(120.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.favorite-icon:hover::after::before {
+  content: "\f004";
+}
+
 .primary-button {
   padding: 20px;
+  min-width: 218px;
   font-weight: 700;
   color: white;
-  background-image: linear-gradient(60.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
+  background-image: linear-gradient(120.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   border: none;
@@ -8336,7 +8371,7 @@ a {
 }
 .primary-button:hover {
   background-position: right;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .functioning-card {
@@ -8391,11 +8426,10 @@ a {
   height: 171px;
   border-radius: 20px 20px 0 0;
 }
-.restaurant-card__content {
+.restaurant-card__container {
   display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 20px;
 }
 .restaurant-card__content__title {
@@ -8404,30 +8438,6 @@ a {
 }
 .restaurant-card__content__subtitle {
   font-size: 17px;
-}
-.restaurant-card__content__favorite {
-  position: absolute;
-  right: 10px;
-}
-.restaurant-card__content__favorite::after {
-  font-family: "Font Awesome 6 Free";
-  font-size: xx-large;
-  content: "\f004";
-}
-.restaurant-card__content__favorite:hover {
-  cursor: pointer;
-}
-.restaurant-card__content__favorite:hover::after {
-  animation: opacity-transition 1s ease-out;
-  background-size: 300%;
-  background-image: linear-gradient(60.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.restaurant-card__content__favorite:hover::after::before {
-  content: "\f004";
 }
 
 body {
@@ -8442,8 +8452,16 @@ header {
   align-items: center;
   text-align: center;
   position: relative;
+  width: 100%;
   height: 63px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header > a {
+  position: absolute;
+  left: 20px;
+}
+header > a :hover {
+  color: blue;
 }
 
 .footer {
@@ -8478,6 +8496,80 @@ header {
     opacity: 1;
   }
 }
+.hero-image > img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-color: #f6f6f6;
+  top: -60px; /* up container position */
+  margin-bottom: -60px;
+  padding-top: 30px;
+  border-radius: 50px 50px 0 0;
+  padding-inline: 20px;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 341px;
+  flex-direction: row;
+}
+.restaurant__title {
+  font-family: "Shrikhand", regular;
+  font-size: 28px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.menu-card {
+  width: 100%;
+  margin-top: 20px;
+  padding-block: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.menu-card__content {
+  margin-inline: 20px;
+}
+.menu-card__content__entry {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu-card__content__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu-card__content__description__price {
+  font-weight: bold;
+}
+
+.btn-container {
+  margin-block: 40px;
+}
+
 .locatisation {
   display: flex;
   flex-direction: column;
