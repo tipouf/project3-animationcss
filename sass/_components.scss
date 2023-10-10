@@ -2,23 +2,24 @@
   padding: 20px;
   min-width: 218px;
   font-weight: 700;
-  color: $font-color;
+  color: $fifth-color;
   background-image: $background-color2;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   border: none;
-  background-size: 200% auto;
-  background-position: left;
-  transition: 300ms background-position ease-in-out,
-    300ms box-shadow ease-in-out;
+  opacity: 1;
+  transition: 0.3s;
 
   &:hover {
+    opacity: 0.8;
     background-position: right;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 }
 
 .functioning-card {
+  z-index: -2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,9 +28,18 @@
   margin-left: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  animation: scale;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+
+  &:active {
+    background-color: aqua;
+  }
 
   &__number {
     position: relative;
+    z-index: -1;
     left: -12px;
     width: 24px;
     height: 24px;
@@ -59,7 +69,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    background: #99e2d0;
+    background: $tertiary-color;
     padding: 5px 12px;
     border-radius: 2px;
     font-size: 14px;
@@ -89,6 +99,37 @@
 
     &__subtitle {
       font-size: 17px;
+    }
+  }
+}
+
+.menu-card {
+  width: 100%;
+  margin-top: 20px;
+  padding-block: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+
+  &__content {
+    margin-inline: 20px;
+
+    &__entry {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__price {
+        font-weight: bold;
+      }
     }
   }
 }

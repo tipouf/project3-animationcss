@@ -7,7 +7,7 @@
 .main-container {
   @include flex-center;
   position: relative;
-  background-color: #f6f6f6;
+  background-color: $fourth-color;
   top: -60px; /* up container position */
   margin-bottom: -60px;
   padding-top: 30px;
@@ -32,37 +32,8 @@
   width: 100%;
   justify-content: flex-start;
   margin: 10px;
-}
 
-.menu-card {
-  width: 100%;
-  margin-top: 20px;
-  padding-block: 15px;
-  background: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-
-  &__content {
-    margin-inline: 20px;
-
-    &__entry {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 5px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    &__description {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      &__price {
-        font-weight: bold;
-      }
-    }
-  }
+  @include grid-container;
 }
 
 .btn-container {

@@ -1,14 +1,16 @@
 $primary-color: #9356dc;
-$secondary-color: #f6f6f6;
-$font-color: white;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$fourth-color: #f6f6f6;
+$fifth-color: white;
 $icon-primary-color: #7e7e7e;
 $background-color: #eaeaea;
 $background-color2: linear-gradient(
   120.33deg,
-  #9356dc -11.44%,
-  #ff79da 123.93%,
-  #9356dc -5.2%,
-  #ff79da 110.74%
+  $primary-color -11.44%,
+  $secondary-color 123.93%,
+  $primary-color -5.2%,
+  $secondary-color 110.74%
 );
 $background-footer: #353535;
 
