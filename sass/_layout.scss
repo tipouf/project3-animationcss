@@ -65,19 +65,18 @@ header {
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1000px) {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
     column-gap: 100px;
     padding-right: 50px;
 
-
     &__content {
-      width: 26%;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 0px;
+      column-gap: 20px;
     }
 
     &__infos {
@@ -85,9 +84,8 @@ header {
     }
 
     &__title {
-      order: 1 ;
+      order: 1;
       font-size: 1rem;
     }
-   
   }
 }
