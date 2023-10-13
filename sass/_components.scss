@@ -112,7 +112,7 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding: 16px;
+  padding: 20px 16px 20px 16px;
   border-radius: 16px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden; /* hide checkContainer when not hovered */
@@ -147,8 +147,8 @@
   &__checkContainer {
     @include flex-center;
     background-color: $tertiary-color;
-    margin-block: -16px;
-    margin-inline: 16px -80px;
+    margin-block: -20px;
+    margin-inline: 20px -80px;
     width: 64px;
     transition-duration: 0.5s;
   }
