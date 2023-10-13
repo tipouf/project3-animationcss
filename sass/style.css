@@ -8317,13 +8317,20 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   height: 25px;
   width: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 16px;
   border-bottom: 3px solid #99e2d0;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-inline: 150px;
+  }
 }
 
 a {
@@ -8419,6 +8426,10 @@ a {
   height: 251px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.restaurant-card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 .restaurant-card__tag {
   position: absolute;
@@ -8452,8 +8463,10 @@ a {
 }
 
 .menu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin-top: 20px;
   padding-block: 15px;
   background: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -8461,6 +8474,7 @@ a {
 }
 .menu-card__content {
   margin-inline: 20px;
+  width: 100%;
 }
 .menu-card__content__entry {
   display: flex;
@@ -8475,6 +8489,12 @@ a {
   justify-content: space-between;
 }
 .menu-card__content__description__price {
+  font-weight: bold;
+}
+.menu-card__check {
+  height: fit-content;
+  margin-inline: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -8550,19 +8570,11 @@ header > a :hover {
 }
 @keyframes scale {
   0% {
-    scale: 0;
-  }
-  100% {
-    scale: 1;
-  }
-}
-@keyframes translate {
-  0% {
-    transform: translateX(3000px);
+    transform: scale(0);
     animation-timing-function: ease-in-out;
   }
   100% {
-    transform: translateX(0px);
+    transform: scale(1);
     animation-timing-function: ease-in-out;
   }
 }
@@ -8584,7 +8596,12 @@ header > a :hover {
   margin-bottom: -60px;
   padding-top: 30px;
   border-radius: 50px 50px 0 0;
-  padding-inline: 20px;
+}
+@media screen and (min-width: 960px) {
+  .main-container {
+    margin-inline: 150px;
+    padding: 20px 20px 60px 20px;
+  }
 }
 
 .restaurant {
@@ -8601,49 +8618,36 @@ header > a :hover {
   font-size: 28px;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
   width: 100%;
-  justify-content: flex-start;
-  margin: 10px;
-  width: 100%;
-  height: auto;
-  padding-block: 40px;
 }
-.menu__title {
-  margin: 0px 20px;
+
+.menu {
+  width: 100%;
 }
 .menu__grid {
   display: grid;
-  gap: 20px;
-  margin: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 10px;
 }
 .menu__grid article:nth-child(1) {
-  animation: translate;
-  animation-duration: 1.5s;
+  animation: scale both;
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
 }
 .menu__grid article:nth-child(2) {
-  animation: translate;
-  animation-duration: 3s;
+  animation: scale both;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
 }
 .menu__grid article:nth-child(3) {
-  animation: translate;
-  animation-duration: 4.5s;
-}
-.menu__grid article:nth-child(4) {
-  animation: translate;
-  animation-duration: 6s;
-}
-@media screen and (min-width: 640px) {
-  .menu__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 960px) {
-  .menu__grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  animation: scale both;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
 }
 
 .btn-container {
@@ -8721,20 +8725,20 @@ header > a :hover {
   margin: 20px;
 }
 .functioning__grid article:nth-child(1) {
-  animation: translate;
-  animation-duration: 1.5s;
+  animation: scale;
+  animation-duration: 1s;
 }
 .functioning__grid article:nth-child(2) {
-  animation: translate;
-  animation-duration: 3s;
+  animation: scale;
+  animation-duration: 2s;
 }
 .functioning__grid article:nth-child(3) {
-  animation: translate;
-  animation-duration: 4.5s;
+  animation: scale;
+  animation-duration: 3s;
 }
 .functioning__grid article:nth-child(4) {
-  animation: translate;
-  animation-duration: 6s;
+  animation: scale;
+  animation-duration: 4s;
 }
 @media screen and (min-width: 640px) {
   .functioning__grid {
@@ -8762,20 +8766,20 @@ header > a :hover {
   margin: 20px;
 }
 .restaurants__grid article:nth-child(1) {
-  animation: translate;
-  animation-duration: 1.5s;
+  animation: scale;
+  animation-duration: 1s;
 }
 .restaurants__grid article:nth-child(2) {
-  animation: translate;
-  animation-duration: 3s;
+  animation: scale;
+  animation-duration: 2s;
 }
 .restaurants__grid article:nth-child(3) {
-  animation: translate;
-  animation-duration: 4.5s;
+  animation: scale;
+  animation-duration: 3s;
 }
 .restaurants__grid article:nth-child(4) {
-  animation: translate;
-  animation-duration: 6s;
+  animation: scale;
+  animation-duration: 4s;
 }
 @media screen and (min-width: 640px) {
   .restaurants__grid {

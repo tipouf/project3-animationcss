@@ -6,7 +6,7 @@
     <title>Oh my food!</title>
     <link rel="stylesheet" href="../sass/style.css" />
   </head>
-  <body>
+  <div>
     <header>
       <a href="../index.html">
         <i class="fa-solid fa-arrow-left fa-2xl" aria-hidden="true"></i>
@@ -20,17 +20,19 @@
         alt="une assiette sur une table"
       />
     </section>
-    <div class="main-container">
+    <main class="main-container">
       <div class="restaurant">
         <div class="restaurant__title">La palette du goût</div>
         <div class="restaurant__favorite favorite-icon"></div>
       </div>
-      <section class="menu">
+      <div class="menu-container">
+        <section class="menu">
         <h3>entrées</h3>
         <div class="menu__grid">
           <article class="menu-card">
             <div class="menu-card__content">
-              <div class="menu-card__content__entry">Fricassée d'escargots</div>
+              <div class="menu-card__content__entry">
+                Fricassée d'escargots</div>
               <div class="menu-card__content__description">
                 <div>Au piment d'Espelette</div>
                 <div class="menu-card__content__description__price">25€</div>
@@ -129,9 +131,11 @@
           </article>
         </div>
       </section>
+      </div>
       <a type="button" class="primary-button btn-container" href="*">
         Commander
       </a>
+    </main>
     </div>
     <footer class="footer">
       <div class="footer__title">ohmyfood</div>

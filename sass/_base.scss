@@ -33,13 +33,20 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   height: 25px;
   width: 40px;
   font-family: $main-font;
   font-weight: 100;
   font-size: 16px;
   border-bottom: 3px solid $tertiary-color;
+  margin-left: 20px;
+}
+
+.container {
+  @media screen and (min-width: 768px) {
+    padding-inline: 150px; 
+  }
 }
 
 @mixin flex-center {
@@ -86,15 +93,6 @@ a {
   width: 100%;
   height: auto;
   padding-block: 40px;
-  // $total-cards: 3;
-
-  // @for $i from 1 through $total-cards {
-  //   &:nth-child(#{$i}) {
-  //     animation-delay: #{$i}s;
-  //     animation: translate;
-  //     animation-duration: #{$i}s;
-  //   }
-  // }
 
   &__title {
     margin: 0px 20px;
@@ -108,8 +106,8 @@ a {
 
     @for $i from 1 through $total-cards {
       article:nth-child(#{$i}) {
-        animation: translate;
-        animation-duration: #{$i * 1.5}s;
+        animation: scale;
+        animation-duration: #{$i}s;
       }
     }
 
