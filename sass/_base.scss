@@ -49,14 +49,6 @@ h3 {
   }
 }
 
-@mixin flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -89,6 +81,14 @@ a {
   }
 }
 
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 @mixin grid-container {
   width: 100%;
   height: auto;
@@ -118,7 +118,7 @@ a {
 $total-cards:3;
 @for $i from 1 through $total-cards {
   article:nth-child(#{$i}) {
-    animation: scale both;
+    animation: scale both ease-in;
     animation-duration: #{$i *0.5}s;
     animation-delay: #{$i * 0.1}s;
   }
