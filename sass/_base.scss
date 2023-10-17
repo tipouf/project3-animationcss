@@ -59,19 +59,13 @@ a {
 }
 
 .favorite-icon {
-  &::after {
     margin-inline: 10px;
-    font-family: $icon-font;
     font-size: xx-large;
-    content: "\f004";
-  }
+    @include fa-icon-regular($fa-var-heart);
 
   &:hover {
-    cursor: pointer;
-    &::after {
       animation: opacity-transition 1s ease-out;
       @include fa-icon-solid($fa-var-heart);
-      background-size: 300%;
       background-image: $background-color2;
       background-clip: text;
       -webkit-background-clip: text;
@@ -79,7 +73,7 @@ a {
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
-}
+
 
 @mixin flex-center {
   display: flex;

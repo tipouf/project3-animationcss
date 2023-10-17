@@ -13,9 +13,10 @@
 .fa-sharp,
 .fas,
 .fa-solid,
-.favorite-icon:hover::after,
+.favorite-icon:hover,
 .far,
 .fa-regular,
+.favorite-icon,
 .fab,
 .fa-brands {
   -moz-osx-font-smoothing: grayscale;
@@ -30,9 +31,10 @@
 .fas,
 .fa-classic,
 .fa-solid,
-.favorite-icon:hover::after,
+.favorite-icon:hover,
 .far,
-.fa-regular {
+.fa-regular,
+.favorite-icon {
   font-family: "Font Awesome 6 Free";
 }
 
@@ -41,7 +43,7 @@
   font-family: "Font Awesome 6 Brands";
 }
 
-.favorite-icon:hover::after {
+.favorite-icon:hover, .favorite-icon {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -8258,7 +8260,7 @@ readers do not read off random characters that represent icons */
 }
 .fas,
 .fa-solid,
-.favorite-icon:hover::after {
+.favorite-icon:hover {
   font-weight: 900;
 }
 
@@ -8281,7 +8283,8 @@ readers do not read off random characters that represent icons */
   src: url("../assets/fonts/fa-regular-400.woff2") format("woff2"), url("../assets/fonts/fa-regular-400.ttf") format("truetype");
 }
 .far,
-.fa-regular {
+.fa-regular,
+.favorite-icon {
   font-weight: 400;
 }
 
@@ -8342,25 +8345,22 @@ a {
   margin-inline: 10px;
 }
 
-.favorite-icon::after {
+.favorite-icon {
   margin-inline: 10px;
-  font-family: "Font Awesome 6 Free";
   font-size: xx-large;
+}
+.favorite-icon::before {
   content: "\f004";
 }
 .favorite-icon:hover {
-  cursor: pointer;
-}
-.favorite-icon:hover::after {
   animation: opacity-transition 1s ease-out;
-  background-size: 300%;
   background-image: linear-gradient(120.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.favorite-icon:hover::after::before {
+.favorite-icon:hover::before {
   content: "\f004";
 }
 
@@ -8516,7 +8516,6 @@ article:nth-child(3) {
 
 .menu-card {
   display: flex;
-  justify-content: space-between;
   background-color: white;
   padding: 20px 16px 20px 16px;
   border-radius: 16px;
@@ -8552,8 +8551,7 @@ article:nth-child(3) {
   align-items: center;
   text-align: center;
   background-color: #99e2d0;
-  margin-block: -20px;
-  margin-inline: 20px -80px;
+  margin: -20px -80px -20px 20px;
   width: 64px;
   transition-duration: 0.5s;
 }
