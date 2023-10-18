@@ -131,6 +131,8 @@
     &__title {
       font-size: 18px;
       font-weight: bold;
+      text-wrap: nowrap;
+      overflow: hidden;
     }
 
     &__subtitle {
