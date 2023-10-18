@@ -11,8 +11,9 @@
   background-color: rgba(255, 255, 255, 0.91);
   backdrop-filter: blur(4px);
   animation: loader;
-  animation-delay: 1s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
+  animation-timing-function: linear;
   animation-duration: 2s;
 
   &__spinner {
@@ -24,8 +25,9 @@
     width: 150px;
     height: 150px;
     animation: spin;
-    animation-duration: 1s;
-    animation-iteration-count: 2;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
   }
 }
 
@@ -50,7 +52,6 @@
 }
 
 .functioning-card {
-  z-index: -2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,8 +65,9 @@
   animation-duration: 2s;
   animation-fill-mode: both;
 
-  &:active {
+  &:hover {
     background-color: aqua;
+    
   }
 
   &__number {
