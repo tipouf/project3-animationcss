@@ -8405,8 +8405,9 @@ article:nth-child(3) {
   background-color: rgba(255, 255, 255, 0.91);
   backdrop-filter: blur(4px);
   animation: loader;
-  animation-delay: 1s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
+  animation-timing-function: linear;
   animation-duration: 2s;
 }
 .loader__spinner {
@@ -8418,8 +8419,9 @@ article:nth-child(3) {
   width: 150px;
   height: 150px;
   animation: spin;
-  animation-duration: 1s;
-  animation-iteration-count: 2;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
 }
 
 .primary-button {
@@ -8442,7 +8444,6 @@ article:nth-child(3) {
 }
 
 .functioning-card {
-  z-index: -2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8456,7 +8457,7 @@ article:nth-child(3) {
   animation-duration: 2s;
   animation-fill-mode: both;
 }
-.functioning-card:active {
+.functioning-card:hover {
   background-color: aqua;
 }
 .functioning-card__number {
@@ -8688,6 +8689,10 @@ header > a :hover {
   }
 }
 @keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
   100% {
     opacity: 0;
     z-index: -2;
@@ -8697,8 +8702,12 @@ header > a :hover {
   0% {
     transform: rotate(0deg);
   }
+  80% {
+    opacity: 1;
+  }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 @keyframes scale {
