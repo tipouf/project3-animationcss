@@ -8351,41 +8351,25 @@ a {
   margin-inline: 10px;
 }
 
-.favorite-icon {
-  margin-inline: 10px;
-  font-size: xx-large;
-}
-.favorite-icon::before {
-  content: "\f004";
-}
-.favorite-icon:hover {
-  animation: opacity-transition 1s ease-out;
-  background-image: linear-gradient(120.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.favorite-icon:hover::before {
-  content: "\f004";
-}
-
 article:nth-child(1) {
   animation: scale both ease-in;
   animation-duration: 0.5s;
   animation-delay: 0.1s;
+  transform-origin: 50% 50%;
 }
 
 article:nth-child(2) {
   animation: scale both ease-in;
   animation-duration: 1s;
   animation-delay: 0.2s;
+  transform-origin: 50% 50%;
 }
 
 article:nth-child(3) {
   animation: scale both ease-in;
   animation-duration: 1.5s;
   animation-delay: 0.3s;
+  transform-origin: 50% 50%;
 }
 
 .loader {
@@ -8395,12 +8379,8 @@ article:nth-child(3) {
   align-items: center;
   text-align: center;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.91);
   backdrop-filter: blur(4px);
@@ -8422,6 +8402,50 @@ article:nth-child(3) {
   animation-duration: 3s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
+}
+.loader__spinner:hover {
+  animation-direction: reverse;
+}
+.loader__text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #9356dc;
+  margin-top: 20px;
+}
+
+span[class^=dot-] {
+  opacity: 0;
+}
+
+.dot-one {
+  animation: dot-one 1s infinite linear;
+}
+
+.dot-two {
+  animation: dot-two 1s infinite linear;
+}
+
+.dot-three {
+  animation: dot-three 1s infinite linear;
+}
+
+.favorite-icon {
+  margin-inline: 10px;
+  font-size: xx-large;
+}
+.favorite-icon::before {
+  content: "\f004";
+}
+.favorite-icon:hover {
+  animation: opacity-transition 1s ease-out;
+  background-image: linear-gradient(120.33deg, #9356dc -11.44%, #ff79da 123.93%, #9356dc -5.2%, #ff79da 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.favorite-icon:hover::before {
+  content: "\f004";
 }
 
 .primary-button {
@@ -8708,6 +8732,48 @@ header > a :hover {
   100% {
     transform: rotate(360deg);
     opacity: 0;
+  }
+}
+@keyframes dot-one {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dot-two {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dot-three {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes scale {
