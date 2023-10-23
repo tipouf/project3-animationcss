@@ -1,12 +1,9 @@
+// loader animation
 .loader {
   @include flex-center;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.91);
   backdrop-filter: blur(4px);
@@ -28,9 +25,51 @@
     animation-duration: 3s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
+
+    &:hover {
+      animation-direction: reverse;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin-top: 20px;
   }
 }
 
+span[class^="dot-"] {
+  opacity: 0;
+}
+.dot-one {
+  animation: dot-one 1s infinite linear;
+}
+.dot-two {
+  animation: dot-two 1s infinite linear;
+}
+.dot-three {
+  animation: dot-three 1s infinite linear;
+}
+
+// heart animation
+.favorite-icon {
+  margin-inline: 10px;
+  font-size: xx-large;
+  @include fa-icon-regular($fa-var-heart);
+
+  &:hover {
+    animation: opacity-transition 1s ease-out;
+    @include fa-icon-solid($fa-var-heart);
+    background-image: $background-color2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// button
 .primary-button {
   padding: 20px;
   min-width: 218px;
@@ -51,6 +90,7 @@
   }
 }
 
+// card
 .functioning-card {
   display: flex;
   flex-direction: row;
@@ -67,7 +107,6 @@
 
   &:hover {
     background-color: aqua;
-    
   }
 
   &__number {
