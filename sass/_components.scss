@@ -25,10 +25,6 @@
     animation-duration: 3s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
-
-    &:hover {
-      animation-direction: reverse;
-    }
   }
 
   &__text {

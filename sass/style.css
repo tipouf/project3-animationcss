@@ -8403,9 +8403,6 @@ article:nth-child(3) {
   animation-fill-mode: both;
   animation-iteration-count: 1;
 }
-.loader__spinner:hover {
-  animation-direction: reverse;
-}
 .loader__text {
   font-size: 1.25rem;
   font-weight: 700;
