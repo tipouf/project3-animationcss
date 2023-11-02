@@ -8478,9 +8478,6 @@ span[class^=dot-] {
   animation-duration: 2s;
   animation-fill-mode: both;
 }
-.functioning-card:hover {
-  background-color: aqua;
-}
 .functioning-card__number {
   position: relative;
   z-index: -1;
@@ -8557,22 +8554,22 @@ span[class^=dot-] {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 .menu-card__content {
-  display: flex;
-  flex-direction: column;
   flex: 1;
   padding: 20px 16px 20px 16px;
-  align-items: start;
-  white-space: nowrap;
   overflow: hidden;
+  text-align: start;
 }
 .menu-card__title, .menu-card__description {
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-card__price {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 10px 0 0;
+  margin: 20px 10px 0 10px;
   font-weight: bold;
 }
 .menu-card__checkContainer {
